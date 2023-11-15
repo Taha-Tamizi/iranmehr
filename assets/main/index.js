@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 })
 
 function showContent(contentId, button) {
-  let contents = document.getElementsByClassName('slick-slider')
+  let contents = document.getElementsByClassName('slider-group')
   for (let i = 0; i < contents.length; i++) {
     contents[i].style.display = 'none'
   }
@@ -53,3 +53,13 @@ jQuery(document).ready(function ($) {
     ],
   })
 })
+
+  window.addEventListener('scroll', function () {
+    var navbar = document.getElementById('navbar')
+
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled')
+    } else {
+      navbar.classList.remove('scrolled')
+    }
+  })
