@@ -251,6 +251,10 @@ body {
   align-items: center;
   gap: 4px;
 }
+.content-info-members {
+  position: relative;
+  right: -24px;
+}
 .content-info-time {
   margin-left: 25px;
 }
@@ -661,18 +665,20 @@ span:nth-child(3) {
 .footer {
   max-width: 2000px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 40px;
-  background-image: url(../images/footer.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  height: 1500px;
   position: relative;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  height: 1126px;
+}
+
+.footer-bg > img {
+  max-width: 2000px;
+  width: 100%;
+}
+.footer-info-container {
+  position: absolute;
+  top: 220px;
+  right: 25%;
 }
 
 .footer-header {
@@ -684,7 +690,7 @@ span:nth-child(3) {
 }
 
 .footer-header > h2 {
-  color: #000;
+  color: #fff;
   text-align: right;
   font-family: IRANYekan;
   font-size: 32px;
@@ -694,13 +700,18 @@ span:nth-child(3) {
 }
 
 .footer-header > a > button {
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.99);
+  border-radius: 60px;
+  border: 0.5px solid #000;
+  background: linear-gradient(
+    268deg,
+    rgba(131, 194, 84, 0.99) 20.76%,
+    rgba(1, 16, 93, 0.99) 111.8%
+  );
   width: 267px;
   height: 61px;
   padding: 10px 32px;
 
-  color: #000;
+  color: #fff;
   font-family: IRANYekan;
   font-size: 24px;
   font-style: normal;
@@ -716,7 +727,7 @@ span:nth-child(3) {
 
 .footer-body > h2 {
   margin-top: 40px;
-  color: #000;
+  color: #fff;
   text-align: right;
   font-family: IRANYekan;
   font-size: 32px;
@@ -727,7 +738,7 @@ span:nth-child(3) {
 
 .footer-body-info-part1 > h3,
 .footer-body-info-part2 > h3 {
-  color: #000;
+  color: #fff;
   text-align: right;
   font-family: IRANYekan;
   font-size: 32px;
@@ -737,7 +748,7 @@ span:nth-child(3) {
 }
 
 .footer-body-info-part1 > p {
-  color: #000;
+  color: #fff;
   text-align: right;
   font-family: IRANYekan;
   font-size: 24px;
@@ -767,10 +778,10 @@ span:nth-child(3) {
 }
 
 .footer-body-info-part2 > ul > li {
-  list-style: disc;
+  list-style: circle;
 }
 .footer-body-info-part2 > ul > li > a {
-  color: rgba(0, 0, 0, 0.83);
+  color: #fff;
   text-align: right;
   font-family: IRANYekan;
   font-size: 24px;
