@@ -1,3 +1,13 @@
+window.addEventListener('scroll', function () {
+  var navbar = document.getElementById('navbar')
+
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+})
+
 jQuery(document).ready(function ($) {
   $('.content').css('display', 'none')
   $('.active').css('display', 'block')
@@ -33,7 +43,6 @@ jQuery(document).ready(function ($) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-       
         },
       },
       {
@@ -53,13 +62,3 @@ jQuery(document).ready(function ($) {
     ],
   })
 })
-
-  window.addEventListener('scroll', function () {
-    var navbar = document.getElementById('navbar')
-
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled')
-    } else {
-      navbar.classList.remove('scrolled')
-    }
-  })
