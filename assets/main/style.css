@@ -393,7 +393,7 @@ span:nth-child(1) {
   right: -100px;
   top: 10px;
   border-radius: 100%;
-  box-shadow: 0px 0px 5px #83c254;
+  border: 1px solid #83c254;
   transform: rotate(-5deg);
   animation: ani2 5s infinite;
 }
@@ -404,7 +404,7 @@ span:nth-child(2) {
   right: -90px;
   top: 10px;
   border-radius: 100%;
-  box-shadow: 0px 0px 5px blue;
+  border: 2px solid rgba(4, 33, 188, 0.79);
   transform: rotate(5deg);
   animation: ani1 5s infinite, rotateBack 0.7s ease-in-out;
 }
@@ -416,7 +416,7 @@ span:nth-child(3) {
   right: -90px;
   top: 10px;
   border-radius: 100%;
-  box-shadow: 0px 0px 5px #83c254;
+  border: 1px solid #83c254;
   transform: rotate(0deg);
   animation: ani 5s infinite;
 }
@@ -694,7 +694,7 @@ span:nth-child(3) {
 .feedback-body > textarea {
   border: none;
   width: 338px;
-  height: 248px;
+  height: 188px;
   flex-shrink: 0;
   border-radius: 32px;
   border-right: 1px solid rgba(126, 127, 130, 0.45);
@@ -1040,7 +1040,7 @@ span:nth-child(3) {
 
   .feedback-body > textarea {
     width: 223px;
-    height: 169.435px;
+    height: 139.435px;
   }
   .feedback-body > button {
     display: flex;
