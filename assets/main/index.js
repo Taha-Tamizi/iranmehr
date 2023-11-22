@@ -39,14 +39,14 @@ jQuery(document).ready(function ($) {
     dots: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
