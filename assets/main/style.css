@@ -8,17 +8,25 @@ body {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../fonts/woff/Qs_Iranyekan.woff') format('woff'),
+    url('../fonts/woff/Qs_Iranyekan.woff2') format('woff2'),
+    url('../fonts/ttf/Qs_Iranyekan.ttf') format('ttf'),
+    url('../fonts/ttf/Qs_Iranyekan.eot') format('eot');
+}
+
 .hero {
+  position: relative;
   height: 750px;
-  overflow: hidden;
+
   margin: 0 auto;
   max-width: 2000px;
   width: 100%;
 }
 .hero > img {
   width: 100%;
-  height: 850px;
-  position: relative;
+
   overflow: visible;
 }
 
@@ -46,9 +54,11 @@ body {
   align-content: center;
   flex-wrap: wrap;
   border-bottom: 1px solid white;
+  transition: background-color 0.3s ease;
 }
 .navbar.scrolled {
-  background-color: #49548b5e;
+  background: rgb(95 106 167 / 93%);
+  box-shadow: 0px 4px 9px 0px rgba(255, 255, 255, 0.17);
   transition: background-color 0.3s ease;
 }
 
@@ -63,11 +73,11 @@ body {
 .navbar ul li a {
   color: #fff;
   text-align: right;
-  font-family: Inter;
-  font-size: 24px;
+  font-family: IRANYekan;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0;
 }
 
 .login-button {
@@ -82,8 +92,8 @@ body {
   border: none;
   color: #fff;
   text-align: right;
-  font-family: Inter;
-  font-size: 24px;
+  font-family: IRANYekan;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -91,39 +101,41 @@ body {
 }
 
 .header-info {
+  display: flex;
+  flex-direction: column;
   z-index: 1;
   position: absolute;
   color: #fff;
-  display: flex;
-  flex-direction: column;
+
   width: 50%;
   right: 100px;
-  top: 130px;
+  top: 200px;
+  padding: 45px;
 }
 
 .header-info h1 {
   color: #fff;
-  font-family: Inter;
-  font-size: 40px;
+  font-family: IRANYekan;
+  font-size: 38px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 0;
 }
 
 .header-info p {
   color: rgba(255, 255, 255, 0.89);
   text-align: right;
-  font-family: Inter;
-  font-size: 32px;
+  font-family: IRANYekan;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   width: 619px;
+  line-height: 40px;
 }
 
 .header-info button {
-  width: 279px;
-  height: 65px;
+  width: 245px;
+  padding: 30px;
   border-radius: 60px;
   background: linear-gradient(
     270deg,
@@ -131,11 +143,11 @@ body {
     rgba(4, 33, 188, 0.94) 175.63%
   );
   box-shadow: 0px 1px 6px 0px rgba(255, 255, 255, 0.17);
-  font-family: Inter;
-  font-size: 32px;
+  font-family: IRANYekan;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0;
   border: none;
   color: white;
   cursor: pointer;
@@ -177,34 +189,12 @@ body {
   display: block;
 }
 
-.active-btn {
-  background: rgba(4, 33, 188, 0.79);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  text-align: right;
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.toggle-btn:not(.active-btn) {
-  background: rgba(228, 233, 255, 0.16);
-  text-align: right;
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: rgba(0, 0, 0, 0.49);
-}
 .first-slider,
 .second-slider,
 .third-slider {
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 1480px;
-  width: 100%;
-  margin-bottom: 80px;
+  width: 95%;
 }
 
 .first-slider-header,
@@ -213,32 +203,62 @@ body {
   margin-right: 30px;
 }
 
+.first-slider-header > h2,
+.second-slider-header > h2,
+.third-slider-header > h2 {
+  color: #000;
+  text-align: right;
+  font-family: IRANYekan;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0;
+}
+.first-slider-header > p,
+.second-slider-header > p,
+.third-slider-header > p {
+  color: rgba(0, 0, 0, 0.76);
+  text-align: right;
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3;
+}
+
 .slider-nav-btns {
   margin-bottom: 10px;
   display: flex;
-  gap: 60px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-right: 30px;
 }
 
 .toggle-btn {
   display: flex;
-  padding: 8px 16px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   border-radius: 84px;
   border: 0.5px solid rgba(166, 180, 255, 0.79);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-
   text-align: right;
-  font-family: Inter;
-  font-size: 24px;
+  font-family: IRANYekan;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0;
 }
-
+.active-btn {
+  background: rgba(4, 33, 188, 0.79);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+.toggle-btn:not(.active-btn) {
+  background: rgba(228, 233, 255, 0.16);
+  color: rgba(0, 0, 0, 0.49);
+}
 .content-info {
   width: 326px;
   height: 363px;
@@ -252,6 +272,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 15px;
+  padding: 5px 0px;
 }
 
 .content-info-header {
@@ -293,7 +314,7 @@ body {
 }
 .content-info-members {
   position: relative;
-  right: -34px;
+  right: -35px;
   top: -13px;
 }
 .content-info-time {
@@ -304,11 +325,11 @@ body {
 .content-info-members > p {
   color: rgba(0, 0, 0, 0.83);
   text-align: right;
-  font-family: Inter;
+  font-family: IRANYekan;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1;
 }
 
 .content-info-button {
@@ -325,19 +346,19 @@ body {
 }
 
 .stage-select {
-  background: linear-gradient(180deg, #e8ecff 0%, rgba(232, 236, 255, 0) 100%);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.41);
+  background: linear-gradient(180deg, rgba(227, 230, 243, 0.69) 0%, #fff 100%);
   height: 676px;
   max-width: 2000px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 40px;
 }
 
 .stage-select-info {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1440px;
+  width: 80%;
   margin: 0 auto;
-  padding: 15px;
+  padding-top: 80px;
 }
 
 .stage-select-info h2 {
@@ -346,13 +367,14 @@ body {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
+  font-family: IRANYekan;
 }
 
 .stage-select-info p {
   color: #000;
   text-align: right;
-  font-family: Inter;
+  font-family: IRANYekan;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -363,8 +385,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   position: relative;
-  top: 150px;
+  top: 100px;
   max-width: 1480px;
   margin: 0 auto;
 }
@@ -376,6 +399,42 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: 900;
+}
+.stage-select-link1::before {
+  display: none;
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -125px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: linear-gradient(
+    131.28deg,
+    #83c254 26.62%,
+    rgba(4, 33, 188, 0.79) 134.02%
+  );
+}
+.stage-select-link1::after {
+  display: none;
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -180px;
+  width: 61px;
+  height: 61px;
+  border-radius: 100%;
+  background: linear-gradient(
+    131.28deg,
+    #83c254 26.62%,
+    rgba(4, 33, 188, 0.79) 134.02%
+  );
+}
+
+.stage-select-link1:hover::before,
+.stage-select-link1:hover::after {
+  display: block;
 }
 .stage-select-link1 > p {
   color: rgba(0, 0, 0, 0.83);
@@ -386,7 +445,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 span:nth-child(1) {
@@ -394,7 +453,7 @@ span:nth-child(1) {
   width: 340px;
   height: 180px;
   right: -100px;
-  top: 10px;
+  top: -30px;
   border-radius: 100%;
   border: 1px solid #83c254;
   transform: rotate(-5deg);
@@ -405,7 +464,7 @@ span:nth-child(2) {
   width: 320px;
   height: 185px;
   right: -90px;
-  top: 10px;
+  top: -30px;
   border-radius: 100%;
   border: 2px solid rgba(4, 33, 188, 0.79);
   transform: rotate(5deg);
@@ -417,14 +476,23 @@ span:nth-child(3) {
   width: 300px;
   height: 190px;
   right: -90px;
-  top: 10px;
+  top: -30px;
   border-radius: 100%;
   border: 1px solid #83c254;
   transform: rotate(0deg);
   animation: ani 5s infinite;
 }
-.stage-select-link1:hover p {
+/* .stage-select-link1:hover p {
   color: blue;
+} */
+
+.stage-select-link1:hover span:nth-child(3) {
+  z-index: -1;
+  background: linear-gradient(
+    242deg,
+    rgba(4, 33, 188, 0.79) 12.93%,
+    #83c254 58.9%
+  );
 }
 
 .stage-select-link1:hover span:nth-child(2) {
@@ -503,7 +571,6 @@ span:nth-child(3) {
   max-width: 2000px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 40px;
 }
 .about-content-container {
   display: flex;
@@ -543,6 +610,7 @@ span:nth-child(3) {
 
 .about-content-body {
   width: 356px;
+  padding: 35px;
 }
 
 .about-content-body h2 {
@@ -552,7 +620,7 @@ span:nth-child(3) {
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
 }
 
 .about-content-body h3 {
@@ -562,7 +630,7 @@ span:nth-child(3) {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 0;
 }
 .about-content-body p {
   color: #fff;
@@ -571,10 +639,7 @@ span:nth-child(3) {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-}
-.third-slider {
-  margin-top: 40px;
+  line-height: 2;
 }
 
 .content-info-header p {
@@ -582,13 +647,14 @@ span:nth-child(3) {
 }
 
 .content-3 {
+  width: 301px;
   border: none;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.25);
   margin: 15px;
   align-items: start;
-  padding-right: 15px;
+  padding-right: 23px;
 }
 .header-3 {
   display: unset;
@@ -598,10 +664,10 @@ span:nth-child(3) {
   color: #01105d;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 24px !;
+
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 2;
   border-bottom: 2px solid #e9e9e9;
   width: 200px;
   padding-bottom: 5px;
@@ -624,8 +690,7 @@ span:nth-child(3) {
 
 .button-3 {
   position: relative;
-  bottom: -5px;
-  right: 160px;
+  right: 155px;
 }
 
 .introduction {
@@ -647,7 +712,7 @@ span:nth-child(3) {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 0;
 }
 
 .introduction p {
@@ -677,7 +742,7 @@ span:nth-child(3) {
   color: #fff;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -732,7 +797,7 @@ span:nth-child(3) {
   background: rgba(4, 33, 188, 0.79);
   padding: 10px 32px;
   color: #fff;
-  font-family: Inter;
+  font-family: IRANYekan;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -749,7 +814,7 @@ span:nth-child(3) {
   margin-top: 40px;
   position: relative;
   height: max-content;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 .footer-bg > img {
@@ -769,7 +834,7 @@ span:nth-child(3) {
   color: #fff;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 32px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -777,40 +842,29 @@ span:nth-child(3) {
 
 .footer-header > a > button {
   border-radius: 60px;
-  border: 0.5px solid #000;
+
   background: linear-gradient(
     268deg,
     rgba(131, 194, 84, 0.99) 20.76%,
     rgba(1, 16, 93, 0.99) 111.8%
   );
-  width: 267px;
-  height: 61px;
+  width: 220px;
+  border: none;
   padding: 10px 32px;
-
   color: #fff;
   font-family: IRANYekan;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  border: none;
 }
 
 .footer-body-info {
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
+  top: 80px;
   gap: 110px;
-}
-
-.footer-body-info-part1 > h2 {
-  color: #fff;
-  text-align: right;
-  font-family: IRANYekan;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
 .footer-body-info-part1 > h3,
@@ -818,7 +872,7 @@ span:nth-child(3) {
   color: #fff;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -828,7 +882,7 @@ span:nth-child(3) {
   color: #fff;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 24px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -863,10 +917,10 @@ span:nth-child(3) {
   color: #fff;
   text-align: right;
   font-family: IRANYekan;
-  font-size: 24px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 0;
 }
 
 .footer-body-info-container-part3 {
@@ -879,8 +933,8 @@ span:nth-child(3) {
 .footer-body-info-container-part3 > p {
   color: #fff;
 
-  font-family: Inter;
-  font-size: 24px;
+  font-family: IRANYekan;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -889,6 +943,9 @@ span:nth-child(3) {
 /* responsive */
 
 @media screen and (max-width: 1024px) {
+  * {
+    line-height: normal !important;
+  }
   .hero {
     height: 374.543px;
   }
@@ -924,46 +981,47 @@ span:nth-child(3) {
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 0;
   }
   .first-slider-header > p,
   .second-slider-header > p,
   .third-slider-header > p {
     color: rgba(0, 0, 0, 0.76);
     text-align: right;
-    font-family: Inter;
+    font-family: IRANYekan;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0;
     width: 271px;
   }
   .slider-nav-btns {
     gap: 20px;
+    row-gap: 12px;
   }
   .slider-nav-btns > button {
     text-align: right;
-    font-family: Inter;
+    font-family: IRANYekan;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0;
   }
   .active-btn {
     text-align: right;
-    font-family: Inter;
+    font-family: IRANYekan;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0;
   }
   .toggle-btn:not(.active-btn) {
     text-align: right;
-    font-family: Inter;
+    font-family: IRANYekan;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0;
   }
 
   .toggle-btn {
@@ -975,25 +1033,28 @@ span:nth-child(3) {
     width: 90%;
   }
   .content-info {
-    margin: 15px;
-    margin-right: 25px;
-    width: 255px;
+    width: 250px;
     height: 305px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 
   .stage-select-info {
     width: auto;
+    padding: 25px;
   }
   .stage-select-info > h2 {
     font-size: 16px;
   }
   .stage-select-info > p {
     font-size: 14px;
+    width: unset;
   }
   .stage-select-links {
     flex-direction: column;
     justify-content: space-between;
     top: 0px;
+    margin-right: 0;
   }
   .stage-select-links > a {
     margin-bottom: 55px;
@@ -1039,7 +1100,7 @@ span:nth-child(3) {
   }
   .about-content-body {
     margin-top: 50px;
-    width: 300px;
+    width: 250px;
   }
   .about-content-body > h2,
   .about-content-body > h3 {
@@ -1063,7 +1124,7 @@ span:nth-child(3) {
   .feedback {
     margin: 0px auto;
     max-width: unset;
-    right: -40px;
+    right: -30px;
   }
   .feedback-header > h3 {
     font-size: 16px;
@@ -1137,7 +1198,6 @@ span:nth-child(3) {
     right: 0;
   }
   .footer {
-    height: 650px;
   }
   .footer-header {
     margin-top: 110px;
@@ -1145,30 +1205,29 @@ span:nth-child(3) {
   }
   .footer-header > h2 {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
   }
   .footer-header > a > button {
-    width: 115px;
-    height: 30px;
+    width: 118px;
     text-align: center;
-    font-family: Inter;
-    font-size: 14px;
+    font-family: IRANYekan;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 0;
     display: inline-flex;
-    padding: 8px 27px;
+    padding: 10px 25px;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .footer-body-info-part1 > h2 {
-    display: none;
-  }
+
   .footer-body-info {
     display: flex;
     gap: 20px;
     flex-direction: column-reverse;
+    align-items: center;
+    top: 0px;
   }
   .footer-body-info-part1 {
     display: flex;
@@ -1182,16 +1241,16 @@ span:nth-child(3) {
   }
   .footer-body-info-part1 > p {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
   }
   .footer-body-icons > li > a > img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
   }
   .footer-body-info-container-part2 {
-    gap: 80px;
+    gap: 50px;
     justify-content: center;
     align-items: center;
+    top: 0px;
   }
   .footer-body-info-part2 {
     display: flex;
@@ -1201,17 +1260,21 @@ span:nth-child(3) {
   }
   .footer-body-info-part2 > h3 {
     text-align: right;
-    font-size: 16px;
+    font-size: 14px;
   }
   .footer-body-info-part2 > ul > li > a {
     text-align: right;
-    font-size: 14px;
+    font-size: 12px;
   }
   .footer-body-info-container-part3 {
     border: none;
     margin-top: 0px;
   }
   .footer-body-info-container-part3 > p {
-    font-size: 12px;
+    font-size: 8px;
   }
 }
+
+/* .slick-slide {
+  width: 387px !important;
+} */
