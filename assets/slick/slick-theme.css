@@ -205,7 +205,7 @@
   color: #0421bc;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 420px) {
   [dir='rtl'] .slick-next:before,
   [dir='rtl'] .slick-prev:before {
     display: none;
