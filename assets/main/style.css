@@ -876,6 +876,11 @@ span:nth-child(3) {
   top: -150px;
   width: 100%;
 }
+@media screen and (min-width: 1700px) {
+  .footer > img {
+    top: -200px;
+  }
+}
 
 .footer-links-container {
   display: flex;
